@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Наш Плейлист 💿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Pacifico&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="pulse-bg"></div>
+<!-- Космический фон -->
+    <div class="cosmic-bg">
+        <div class="milky-way"></div>
+        <div class="milky-way-deep"></div>
+        <div class="stars" id="stars-container"></div>
+        <div class="nebula-pulse"></div>
+    </div>    
+
+    <!-- Начальный экран -->
+    <section class="intro" id="intro">
+        <div class="breathing-spot" onclick="startExperience()"></div>
+        <div class="start-text" onclick="startExperience()">НАЖМИ, ЧТОБЫ НАЧАТЬ</div>
+    </section>
+
+    <!-- Основной контент -->
+    <div class="main-content" id="main-content">
+        
+        <!-- Плеер -->
+        <section class="section player-section" id="player-section">
+            <div class="hero-player">
+                <div class="hero-cover" id="cover">
+                    <img src="images/cover1.jpg" alt="Обложка" id="cover-img">
+                </div>
+                <h1 class="hero-title" id="track-title">Начало Истории</h1>
+                <p class="hero-subtitle" id="track-subtitle">Глава 1 • Наши первые встречи</p>
+                
+                <div class="hero-controls">
+                    <button class="hero-btn" onclick="changeTrack(-1)">⏮</button>
+                    <button class="hero-btn hero-play" id="play-btn" onclick="togglePlay()">▶</button>
+                    <button class="hero-btn" onclick="changeTrack(1)">⏭</button>
+                </div>
+                
+                <div class="hero-progress">
+                    <div class="progress-bar" onclick="seekTrack(event)">
+                        <div class="progress-fill" id="progress"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <span id="total-time">3:45</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Лента фото -->
+        <section class="gallery-section" id="gallery">
+            <h2 class="gallery-title">Наша история</h2>
+            <div class="photo-ribbon" id="photo-ribbon">
+                <!-- 16 фото будут здесь -->
+            </div>
+        </section>
+
+        <!-- Финал -->
+        <section class="final-section" id="final">
+            <div class="final-heart">💖</div>
+            <div class="final-text" id="final-message"></div>
+            
+            <div class="final-buttons">
+                <button class="secret-btn" onclick="showSecret()">
+                    <span>📜</span>
+                    <span>Тайное послание</span>
+                </button>
+                
+                <button class="restart-btn" onclick="restartFromBeginning()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                        <path d="M3 3v5h5"/>
+                    </svg>
+                    <span>Смотреть с начала</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="secret-modal" id="secret-modal" onclick="closeSecret(event)">
+        <button class="secret-close" onclick="closeSecretButton(event)">×</button>
+        <div class="secret-content" onclick="event.stopPropagation()">
+            <div class="secret-icon">🔮</div>
+            <h3 class="secret-title">Тайное послание</h3>
+            <p class="secret-text" id="secret-text"></p>
+            <div class="secret-seal">💌</div>
+        </div>
+    </div>
+
+    <!-- Аудио -->
+    <audio id="audio-player" preload="auto"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
