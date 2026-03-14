@@ -3,70 +3,70 @@
 // Треки (замени пути на свои файлы в папке audio/)
 const tracks = [
     {
-        file: 'audio/song1.mp3',
+        file: 'song1.mp3',
         title: 'Меня всегда тянет к тебе',
         subtitle: 'Гравитация',
         cover: 'images/cover1.jpg',
         duration: '3:45'
     },
     {
-        file: 'audio/song2.mp3',
+        file: 'song2.mp3',
         title: 'Нон стоп',
         subtitle: 'Гравитация',
         cover: 'images/cover2.jpg',
         duration: '1:48'
     },
     {
-        file: 'audio/song3.mp3',
+        file: 'song3.mp3',
         title: 'Рядом С Тобой',
         subtitle: 'Гравитация',
         cover: 'images/cover3.jpg',
         duration: '2:15'
     },
     {
-        file: 'audio/song4.mp3',
+        file: 'song4.mp3',
         title: 'Лучшая девочка',
         subtitle: 'Гравитация',
         cover: 'images/cover4.jpg',
         duration: '2:15'
     },
     {
-        file: 'audio/song5.mp3',
+        file: 'song5.mp3',
         title: 'Какая? -ЛЮБИМАЯ',
         subtitle: 'Гравитация',
         cover: 'images/cover5.jpg',
         duration: '2:56'
     },
     {
-        file: 'audio/song6.mp3',
+        file: 'song6.mp3',
         title: 'Моя Мечта',
         subtitle: 'Гравитация',
         cover: 'images/cover6.jpg',
         duration: '3:45'
     },
     {
-        file: 'audio/song7.mp3',
+        file: 'song7.mp3',
         title: 'Только МОЯ хулиганка',
         subtitle: 'Гравитация',
         cover: 'images/cover7.jpg',
         duration: '3:10'
     },
     {
-        file: 'audio/song8.mp3',
+        file: 'song8.mp3',
         title: 'Небо даст нам шанс',
         subtitle: 'Гравитация',
         cover: 'images/cover8.jpg',
         duration: '2:19'
     },
     {
-        file: 'audio/song9.mp3',
+        file: 'song9.mp3',
         title: 'ZEN',
         subtitle: 'Гравитация',
         cover: 'images/cover9.jpg',
         duration: '3:30'
     },
     {
-        file: 'audio/song10.mp3',
+        file: 'song10.mp3',
         title: 'Мастер и Оксана',
         subtitle: 'Гравитация',
         cover: 'images/cover10.jpg',
